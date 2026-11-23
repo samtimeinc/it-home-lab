@@ -25,10 +25,10 @@ A NAT network gives each guest both internet access and direct reachability to i
 2. Created the NAT network `LABNET` on `10.20.0.0/24` with DHCP enabled, deliberately avoiding VirtualBox's default `10.0.2.0/24` prefix.
    `![LABNET network configuration](screenshots/virtualbox-labnet.png)`
 3. Provisioned the `UBUNTU-TEST` VM: 4096 MB RAM, 2 processors, 40 GB dynamically allocated disk.
-4. Mounted the Ubuntu Desktop 26.04.1 installer ISO and completed the installation to the virtual disk.
+4. Mounted the Ubuntu Desktop 26.04.1 installer ISO and installed to the 40 GB virtual disk using the "erase disk and install" option.
    `![Ubuntu desktop running inside VirtualBox](screenshots/ubuntu-desktop-in-virtualbox.png)`
-5. Verified connectivity: the guest received `10.20.0.3` from LABNET's DHCP and reached the internet through NAT.
-6. Took a powered-off snapshot named `Fresh Install - Clean 11/21/26` as the baseline.
+5. Verified connectivity: the guest received `10.20.0.3` from LABNET's DHCP, and Firefox loaded a web page through NAT.
+6. Took a powered-off snapshot named `2026-11-21-Fresh-Install` as the baseline.
 7. Ran a deliberate destructive test — `sudo rm -rf ~/Documents` — then restored the snapshot and confirmed the folder returned intact.
 
 ## Problems I hit and how I fixed them
