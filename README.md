@@ -1,6 +1,6 @@
 # IT Home Lab — Rainier Trading Co.
 
-**Samnang Phin** · Seattle, WA · [LinkedIn](https://www.linkedin.com/in/sam-phin-9bb6a624a/) · [Portfolio](https://www.samnang.work/) · [GitHub](https://github.com/samtimeinc)
+**Sam Phin** · Seattle, WA · [LinkedIn](https://www.linkedin.com/in/sam-phin-9bb6a624a/) · [Portfolio](https://www.samnang.work/) · [GitHub](https://github.com/samtimeinc)
 
 I am designing, building, and documenting the complete IT infrastructure for a simulated 45-person company — Rainier Trading Co. — including Active Directory, Microsoft 365, a Linux-hosted ticketing helpdesk, a pfSense firewall, monitoring and SIEM, automation, and documented hardware operations. It all runs on a VirtualBox lab bench on a single physical machine: domain controller, Windows clients, Linux servers, and a firewall that talk to each other over their own private network.
 
