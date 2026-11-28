@@ -6,14 +6,14 @@ I am designing, building, and documenting the complete IT infrastructure for a s
 
 This repository is the evidence trail, not a tutorial collection. Every lab ships with the receipts — screenshots, diagrams, runnable scripts, and a dated work journal that records what broke and how it got fixed. **The status table below is the honest source of truth:** a lab shows complete only when the hands-on work is finished *and* its evidence is published here.
 
-> **Master network diagram** — arrives with Lab 05 (Networking), then gets updated as the environment grows. Editable `.drawio` source and PNG export live in [`/diagrams`](diagrams).
+> **Environment diagram** — Lab 01's network is published in [`/diagrams`](diagrams) as `lab-01-network-v1.png`, with its editable `.drawio` source beside it. It becomes the master diagram in Lab 05 (Networking), then grows with the environment.
 
 ## Lab index
 
 | # | Lab | What it demonstrates | Status | Evidence |
 |---|---|---|---|---|
 | 00 | Virtualization Foundation | VirtualBox hypervisor, NAT lab network (LABNET `10.20.0.0/24`), VM provisioning, snapshots and rollback | ✅ Complete | [Lab 00](labs/00-virtualization-foundation) |
-| 01 | Active Directory | Windows Server domain controller, OU and group design, user lifecycle (adds/moves/changes, unlock, disable), Group Policy | ⬜ Not started | — |
+| 01 | Active Directory | Windows Server domain controller, OU and group design, user lifecycle (adds/moves/changes, unlock, disable), Group Policy | ✅ Complete | [Lab 01](labs/01-active-directory) |
 | 02 | Microsoft 365 | Tenant administration, Exchange Online, MFA and Conditional Access in Entra ID | ⬜ Not started | — |
 | 03 | Linux Fundamentals | A server administered entirely from the command line — users, permissions, services, logs, storage | ⬜ Not started | — |
 | 04 | Ticketing System | osTicket self-hosted plus Jira Service Management — intake, triage, SLAs, resolved-ticket queue | ⬜ Not started | — |

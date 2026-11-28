@@ -1,6 +1,6 @@
 # Lab 01 — Active Directory: The Company ID Office
 
-**Status:** 🔨 Hands-on complete — artifacts staged in this folder, commit pending
+**Status:** ✅ Complete — hands-on work finished 2026-11-27, evidence published in this folder
 **Started:** 2026-11-22 · **Completed:** 2026-11-27 · **Time invested:** ~14 hours
 **Environment:** VirtualBox 7.2.16 on Windows 11 Pro · `DC01`: Windows Server 2022 Standard Evaluation (Desktop Experience), 4 GB RAM, 2 vCPU, 60 GB disk · `CLIENT01`: Windows 11 Enterprise 26H2 Evaluation, 4 GB RAM, 2 vCPU, 80 GB disk, EFI + Secure Boot + TPM 2.0 · Domain `rainiertrading.local` · Lab network `LABNET` 10.20.0.0/24
 
