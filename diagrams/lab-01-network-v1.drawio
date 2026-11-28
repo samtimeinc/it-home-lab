@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="resume-career-agent" version="24.7.17">
+  <diagram id="lab01-net" name="Lab 01 network">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="host" value="&lt;b&gt;Windows 11 Pro host&lt;/b&gt; · AMD Ryzen 9 5900X · 64 GB RAM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFCFD;strokeColor=#B8C4D0;verticalAlign=top;align=left;spacingLeft=18;spacingTop=10;fontSize=14;arcSize=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="36" width="1720" height="764" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vbox" value="VirtualBox 7.2.16 + Extension Pack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7FA;strokeColor=#B8C4D0;verticalAlign=top;align=left;spacingLeft=18;spacingTop=8;fontSize=13;fontColor=#5A6776;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="1660" height="668" as="geometry" />
+        </mxCell>
+
+        <mxCell id="labnet" value="&lt;b&gt;NAT Network  LABNET&lt;/b&gt;&amp;nbsp;&amp;nbsp; 10.20.0.0/24 · gateway 10.20.0.1 · DHCP pool 10.20.0.3 – 10.20.0.254" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF1FB;strokeColor=#5B8FD6;verticalAlign=top;align=left;spacingLeft=18;spacingTop=10;fontSize=13;fontColor=#1F4E79;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="1600" height="578" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dc01" value="&lt;b style=&quot;font-size:15px&quot;&gt;DC01&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;#FFFFFF&quot; style=&quot;background-color:#1F4E79&quot;&gt;&amp;nbsp;domain controller&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#5A6776&quot;&gt;Windows Server 2022 Standard Eval&lt;/font&gt;&lt;br&gt;&lt;b&gt;10.20.0.10&lt;/b&gt;  static&lt;br&gt;AD DS · DNS&lt;br&gt;forest root  rainiertrading.local&lt;br&gt;NetBIOS name  RAINIER&lt;br&gt;&lt;font color=&quot;#5A6776&quot;&gt;Domain Admins: samnang.phin&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E79;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="300" width="450" height="292" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ubuntu" value="&lt;b style=&quot;font-size:15px&quot;&gt;UBUNTU-TEST&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;#FFFFFF&quot; style=&quot;background-color:#788696&quot;&gt;&amp;nbsp;Lab 00&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#5A6776&quot;&gt;Ubuntu Desktop 26.04.1&lt;/font&gt;&lt;br&gt;&lt;b&gt;10.20.0.3&lt;/b&gt;  DHCP&lt;br&gt;provisioned in Lab 00&lt;br&gt;&lt;font color=&quot;#5A6776&quot;&gt;snapshot / rollback drill&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#788696;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="675" y="300" width="450" height="292" as="geometry" />
+        </mxCell>
+
+        <mxCell id="client01" value="&lt;b style=&quot;font-size:15px&quot;&gt;CLIENT01&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;#FFFFFF&quot; style=&quot;background-color:#1F4E79&quot;&gt;&amp;nbsp;domain member&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#5A6776&quot;&gt;Windows 11 Enterprise 26H2&lt;/font&gt;&lt;br&gt;&lt;b&gt;10.20.0.x&lt;/b&gt;  DHCP&lt;br&gt;domain-joined to rainiertrading.local&lt;br&gt;computers OU → Workstations&lt;br&gt;DNS → 10.20.0.10 (DC01)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E79;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="300" width="450" height="292" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="endArrow=none;html=1;strokeColor=#5B8FD6;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="dc01" target="labnet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=none;html=1;strokeColor=#5B8FD6;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="ubuntu" target="labnet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=none;html=1;strokeColor=#5B8FD6;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="client01" target="labnet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n1" value="&lt;b&gt;Identity:&lt;/b&gt; rainiertrading.local (DNS) · RAINIER (NetBIOS)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Accounting:&lt;/b&gt; 12 users across 5 OUs · 4 security groups" style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#5A6776;" vertex="1" parent="1">
+          <mxGeometry x="150" y="612" width="1400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;b&gt;Policy:&lt;/b&gt; Default Domain Policy — 12-character minimum, 5-attempt lockout&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IT-Wallpaper linked to Workstations, applied via loopback" style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#5A6776;" vertex="1" parent="1">
+          <mxGeometry x="150" y="648" width="1400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="&lt;b&gt;Drills:&lt;/b&gt; reset · unlock · onboard · offboard · move · grant/revoke · search · service account" style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#5A6776;" vertex="1" parent="1">
+          <mxGeometry x="150" y="684" width="1400" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cap" value="Lab 01 — Active Directory · Rainier Trading Co. is a simulated environment; all data is fictional." style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#788696;" vertex="1" parent="1">
+          <mxGeometry x="40" y="820" width="1400" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
